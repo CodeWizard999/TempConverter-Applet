@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="355.0" prefWidth="600.0" style="-fx-border-color: #1AA9B1 #1AA9B1; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_final_partb.TempratureConverterController">
+   <children>
+      <DialogPane fx:id="errorMessage" layoutX="129.0" layoutY="198.0" prefHeight="91.0" prefWidth="335.0" style="-fx-border-color: #1AA9B1 #1AA9B1; -fx-border-width: 2;" visible="false">
+         <header>
+            <AnchorPane prefHeight="29.0" prefWidth="262.0" style="-fx-background-color: #1AA9B1 #1AA9B1;">
+               <children>
+                  <Label text="Error Message" textFill="WHITE" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="2.0" />
+                  <Button fx:id="bttCorss2" mnemonicParsing="false" onAction="#closeError" text="x" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </header>
+         <content>
+            <Label fx:id="txtError" prefHeight="36.0" prefWidth="351.0" />
+         </content>
+      </DialogPane>
+      <AnchorPane prefHeight="28.0" prefWidth="258.0" style="-fx-background-color: #1AA9B1;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutY="3.0" text="temparture converter " textFill="WHITE" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="5.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Button fx:id="bttCross" layoutX="234.0" layoutY="2.0" mnemonicParsing="false" onAction="#closeApplication" prefHeight="17.0" prefWidth="17.0" text="x" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <TextField fx:id="txtCel" layoutX="176.0" layoutY="109.0" onKeyPressed="#handle" prefHeight="26.0" prefWidth="95.0" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="176.0" />
+      <TextField fx:id="txtFah" layoutX="400.0" layoutY="110.0" onKeyPressed="#handle" prefHeight="26.0" prefWidth="95.0" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="400.0" />
+      <Label layoutX="121.0" layoutY="114.0" text="Celsius" />
+      <Label layoutX="325.0" layoutY="114.0" text="Fahrenheit" />
+   </children>
+</AnchorPane>
